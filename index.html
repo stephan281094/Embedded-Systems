@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        
+        #screen {
+            position: relative;
+            margin: 2.5em auto;
+            width: 128px; /* 128px */
+            height: 64px; /* 64px */
+            background-color: #0c0;
+            zoom: 4;
+        }
+        
+        .pxl {
+            position: absolute;
+            top: 0; left: 0;
+            width: 1px;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="screen"></div>
+    <script type="text/javascript">
+        // Variables
+        var screen = document.getElementById('screen');
+        
+        /* When window has loaded, this function will start */
+        function init(){
+            drawLine(0, 0, 120, 40, 'dotted');
+        }
+        
+        /* Draws one pixel using x and y coordinates */
+        function setPixel(x, y){
+            var pxl = document.createElement("div");
+                pxl.className = 'pxl';
+                pxl.style.left = x + 'px';
+                pxl.style.top = y + 'px';
+            screen.appendChild(pxl);
+        }
+
+        /* Draws a line from A(xA, yA) to B(xB, yB) with optional style(dotted)*/
+        /* Does not support horizontal or vertical lines */
+        function drawLine(xA, yA, xB, yB, style){
+            var dX    = xB - xA;
+            var dY    = yB - yA;
+            var alpha = dX / dY;
+
+            for(var i = 0; i < dY; i++){
+                var yP  = yA + i;
+                var xP  = xA + (i * alpha);
+                var xP2 = xA + ((i + 1) * alpha)
+
+//                alert(style);
+                if(style === 'dotted'){
+                    setPixel(xP, yP);
+                }else{
+                    while(xP < xP2){
+                        setPixel(xP, yP);
+                        xP++;
+                    }
+                }
+            }
+        }
+            
+        window.onload = init();
+    </script>
+</body>
+</html>
