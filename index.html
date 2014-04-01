@@ -10,8 +10,8 @@
         #screen {
             position: relative;
             margin: 2.5em auto;
-            width: 128px; /* 128px */
-            height: 64px; /* 64px */
+            width: 128px;
+            height: 64px;
             background-color: #0c0;
             zoom: 4;
         }
@@ -55,9 +55,8 @@
             for(var i = 0; i < dY; i++){
                 var yP  = yA + i;
                 var xP  = xA + (i * alpha);
-                var xP2 = xA + ((i + 1) * alpha)
-
-//                alert(style);
+                var xP2 = xA + ((i + 1) * alpha);
+                
                 if(style === 'dotted'){
                     setPixel(xP, yP);
                 }else{
