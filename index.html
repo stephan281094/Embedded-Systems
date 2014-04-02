@@ -12,7 +12,7 @@
             margin: 2.5em auto;
             width: 128px;
             height: 64px;
-            background-color: #0c0;
+            background-color: #046733;
             zoom: 4;
         }
         
@@ -27,13 +27,31 @@
 </head>
 <body>
     <div id="screen"></div>
+    
     <script type="text/javascript">
         // Variables
         var screen = document.getElementById('screen');
         
         /* When window has loaded, this function will start */
         function init(){
-            drawLine(0, 0, 120, 40, 'dotted');
+            drawLine(0, 0, 129, 64, 'dotted');
+            drawLine(127, 0, -2, 64, 'dotted');
+            
+            /* Vertical lines */
+            // Left Left Mid (1)
+            drawLine(15.875, 8, 15.875, 56, 'dotted');
+            // Left Mid (2)
+            //drawLine(31.75, 0, 31.75, 64, 'dotted');
+            // Left Right Mid (3)
+            drawLine(47.625, 24, 47.625, 40, 'dotted');
+            // center (4)
+            //drawLine(63.5, 0, 63.5, 64, 'dotted');
+            // Right Left Mid (5)
+            drawLine(79.375, 24, 79.375, 40, 'dotted');
+            // Right Mid (6)
+            //drawLine(95.25, 0, 95.25, 64, 'dotted');
+            // Right Right Mid (7)
+            drawLine(111.125, 8, 111.125, 56, 'dotted');
         }
         
         /* Draws one pixel using x and y coordinates */
