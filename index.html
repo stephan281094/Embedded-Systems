@@ -39,19 +39,23 @@
             
             /* Vertical lines */
             // Left Left Mid (1)
-            drawLine(15.875, 8, 15.875, 56, 'dotted');
+            drawLine(16, 8, 16, 56, 'dotted');
             // Left Mid (2)
             //drawLine(31.75, 0, 31.75, 64, 'dotted');
             // Left Right Mid (3)
-            drawLine(47.625, 24, 47.625, 40, 'dotted');
+            drawLine(48, 24, 48, 40, 'dotted');
             // center (4)
             //drawLine(63.5, 0, 63.5, 64, 'dotted');
             // Right Left Mid (5)
-            drawLine(79.375, 24, 79.375, 40, 'dotted');
+            drawLine(80, 24, 80, 40, 'dotted');
             // Right Mid (6)
             //drawLine(95.25, 0, 95.25, 64, 'dotted');
             // Right Right Mid (7)
-            drawLine(111.125, 8, 111.125, 56, 'dotted');
+            drawLine(111, 8, 111, 56, 'dotted');
+            
+            // Horizontal line for testing purposes
+            drawLine(20, 20, 120, 20, 'dotted');
+            drawLine(20, 30, 120, 30, null);
         }
         
         /* Draws one pixel using x and y coordinates */
@@ -69,6 +73,12 @@
             var dX    = xB - xA;
             var dY    = yB - yA;
             var alpha = dX / dY;
+            
+            if(dY === 0){
+                for(var i = xA; i < dX; i++){
+                    setPixel(i, yA);
+                }
+            }
 
             for(var i = 0; i < dY; i++){
                 var yP  = yA + i;
