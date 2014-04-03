@@ -1,0 +1,25 @@
+/* 
+    Created on : Apr 3, 2014, 3:32:10 PM
+    Author     : Adrian Zborowski
+*/
+
+body {
+	background-color: #f0f0f0;
+}
+
+#screen {
+	position: relative;
+	margin: 2.5em auto;
+	width: 128px;
+	height: 64px;
+	background-color: #046733;
+	zoom: 4;
+}
+
+.pxl {
+	position: absolute;
+	top: 0; left: 0;
+	width: 1px;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
