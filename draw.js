@@ -205,5 +205,10 @@ function drawCatHeadBig() {
 }
 
 function drawClearSyamaze(){
-	
+	clearArea(31, 6, 5, 1);
+	clearArea(37, 6, 5, 1);
+	clearArea(43, 6, 3, 1);
+	clearPixel(50, 6);
+	clearArea(57, 6, 4, 1);
+	clearArea(66, 6, 2, 1);
 }
