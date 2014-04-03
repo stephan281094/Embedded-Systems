@@ -51,7 +51,7 @@ function drawArea(x, y, length, height) {
 /**
  * catHeadBig Draws a full screen cat head
  */
-function catHeadBig() {
+function drawCatHeadBig() {
 	drawArea(0, 0, 128, 22);
 
 	drawArea(0, 22, 34, 1);
@@ -202,4 +202,8 @@ function catHeadBig() {
 	setPixel(83, 60);
 	drawArea(46, 61, 37, 1);
 	drawArea(55, 62, 19, 2);
+}
+
+function drawClearSyamaze(){
+	
 }
