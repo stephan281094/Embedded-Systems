@@ -1,4 +1,4 @@
-Microchip Technology Inc, v†N
+Microchip Technology Inc, v‡N
 
 Tool Name:
   c:\program files (x86)\microchip\xc16\v1.21\bin\bin\..\bin/elf-ld.exe
@@ -64,13 +64,13 @@ Program Memory  [Origin = 0x14c0, Length = 0x96e8]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                       0x14c0                0x94            0xde  (222)
-.text                       0x1554               0x6e2           0xa53  (2643)
-.dinit                      0x1c36               0x48e           0x6d5  (1749)
-.text                       0x20c4               0x430           0x648  (1608)
-.isr.text                   0x24f4                0x70            0xa8  (168)
-.text                       0x2564                0x32            0x4b  (75)
+.text                       0x1554               0x7da           0xbc7  (3015)
+.dinit                      0x1d2e               0x518           0x7a4  (1956)
+.text                       0x2246               0x430           0x648  (1608)
+.isr.text                   0x2676                0x70            0xa8  (168)
+.text                       0x26e6                0x32            0x4b  (75)
 
-                     Total program memory used (bytes):         0x1941  (6465) 11%
+                     Total program memory used (bytes):         0x1b84  (7044) 12%
 
 
 Data Memory  [Origin = 0x800, Length = 0x1fff]
@@ -79,9 +79,9 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .ndata                       0x800                   0           0x400  (1024)
 .nbss                        0xc00                   0           0x400  (1024)
-.ndata                      0x1000                   0           0x2aa  (682)
+.ndata                      0x1000                   0           0x378  (888)
 
-                        Total data memory used (bytes):          0xaaa  (2730) 33%
+                        Total data memory used (bytes):          0xb78  (2936) 35%
 
 
 Dynamic Memory Usage
@@ -89,9 +89,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x12aa                              0x1556  (5462)
+stack                       0x1378                              0x1488  (5256)
 
-                        Maximum dynamic memory (bytes):         0x1556  (5462)
+                        Maximum dynamic memory (bytes):         0x1488  (5256)
 
 
 External Symbols in Data Memory (by address):
@@ -99,92 +99,106 @@ External Symbols in Data Memory (by address):
                     0x0800                  _itopia
                     0x0c00                  _dogmScreen
                     0x1000                  _boldFont
-                    0x12a8                  _lastButtonChanged
+                    0x12a8                  _direction
+                    0x12aa                  _maze
+                    0x1372                  _userX
+                    0x1374                  _userY
+                    0x1376                  _lastButtonChanged
 
 External Symbols in Data Memory (by name):
 
                     0x1000                  _boldFont
+                    0x12a8                  _direction
                     0x0c00                  _dogmScreen
                     0x0800                  _itopia
-                    0x12a8                  _lastButtonChanged
+                    0x1376                  _lastButtonChanged
+                    0x12aa                  _maze
+                    0x1372                  _userX
+                    0x1374                  _userY
 
 External Symbols in Program Memory (by address):
 
                   0x0014bc                  __DEFAULT_VECTOR
                   0x0014c0                  __resetPRI
                   0x0014e6                  __psv_init
-                  0x0014f6                  __data_init_standard
                   0x0014f6                  __data_init
-                  0x001554                  _delayMs
-                  0x001586                  _drawLine
-                  0x00160c                  _drawArea
-                  0x001652                  _startMenu
-                  0x001bda                  _main
-                  0x0020c4                  _mdog_Init
-                  0x002110                  _mdog_spi_out
-                  0x002140                  _SPI_cmd_send
-                  0x002154                  _SPI_data_send
-                  0x002168                  _clearDisplay
-                  0x0021de                  _initScreen
-                  0x00221e                  _setPixel
-                  0x002268                  _clearPixel
-                  0x0022b4                  _drawScreen
-                  0x00234e                  _drawBitmap
-                  0x0023e8                  _writeChar
-                  0x00246c                  _writeString
-                  0x0024c0                  _st7565r_set_column_address
-                  0x0024e0                  _st7565r_set_page_address
-                  0x0024f4                  __CNInterrupt
-                  0x002530                  __OscillatorFail
-                  0x002536                  __AddressError
-                  0x00253c                  __StackError
-                  0x002542                  __MathError
-                  0x002548                  __AltOscillatorFail
-                  0x00254e                  __AltAddressError
-                  0x002554                  __AltStackError
-                  0x00255a                  __AltMathError
-                  0x002560                  __DefaultInterrupt
-                  0x002564                  _InitApp
-                  0x002590                  _ConfigureOscillator
+                  0x0014f6                  __data_init_standard
+                  0x001554                  _forward
+                  0x0015f8                  _turnRight
+                  0x001620                  _turnLeft
+                  0x00164c                  _delayMs
+                  0x00167e                  _drawLine
+                  0x001704                  _drawArea
+                  0x00174a                  _startMenu
+                  0x001cd2                  _main
+                  0x002246                  _mdog_Init
+                  0x002292                  _mdog_spi_out
+                  0x0022c2                  _SPI_cmd_send
+                  0x0022d6                  _SPI_data_send
+                  0x0022ea                  _clearDisplay
+                  0x002360                  _initScreen
+                  0x0023a0                  _setPixel
+                  0x0023ea                  _clearPixel
+                  0x002436                  _drawScreen
+                  0x0024d0                  _drawBitmap
+                  0x00256a                  _writeChar
+                  0x0025ee                  _writeString
+                  0x002642                  _st7565r_set_column_address
+                  0x002662                  _st7565r_set_page_address
+                  0x002676                  __CNInterrupt
+                  0x0026b2                  __OscillatorFail
+                  0x0026b8                  __AddressError
+                  0x0026be                  __StackError
+                  0x0026c4                  __MathError
+                  0x0026ca                  __AltOscillatorFail
+                  0x0026d0                  __AltAddressError
+                  0x0026d6                  __AltStackError
+                  0x0026dc                  __AltMathError
+                  0x0026e2                  __DefaultInterrupt
+                  0x0026e6                  _InitApp
+                  0x002712                  _ConfigureOscillator
 
 External Symbols in Program Memory (by name):
 
-                  0x002590                  _ConfigureOscillator
-                  0x002564                  _InitApp
-                  0x002140                  _SPI_cmd_send
-                  0x002154                  _SPI_data_send
-                  0x002536                  __AddressError
-                  0x00254e                  __AltAddressError
-                  0x00255a                  __AltMathError
-                  0x002548                  __AltOscillatorFail
-                  0x002554                  __AltStackError
-                  0x0024f4                  __CNInterrupt
+                  0x002712                  _ConfigureOscillator
+                  0x0026e6                  _InitApp
+                  0x0022c2                  _SPI_cmd_send
+                  0x0022d6                  _SPI_data_send
+                  0x0026b8                  __AddressError
+                  0x0026d0                  __AltAddressError
+                  0x0026dc                  __AltMathError
+                  0x0026ca                  __AltOscillatorFail
+                  0x0026d6                  __AltStackError
+                  0x002676                  __CNInterrupt
                   0x0014bc                  __DEFAULT_VECTOR
-                  0x002560                  __DefaultInterrupt
-                  0x002542                  __MathError
-                  0x002530                  __OscillatorFail
-                  0x00253c                  __StackError
+                  0x0026e2                  __DefaultInterrupt
+                  0x0026c4                  __MathError
+                  0x0026b2                  __OscillatorFail
+                  0x0026be                  __StackError
                   0x0014f6                  __data_init
                   0x0014f6                  __data_init_standard
                   0x0014e6                  __psv_init
                   0x0014c0                  __resetPRI
-                  0x002168                  _clearDisplay
-                  0x002268                  _clearPixel
-                  0x001554                  _delayMs
-                  0x00160c                  _drawArea
-                  0x00234e                  _drawBitmap
-                  0x001586                  _drawLine
-                  0x0022b4                  _drawScreen
-                  0x0021de                  _initScreen
-                  0x001bda                  _main
-                  0x0020c4                  _mdog_Init
-                  0x002110                  _mdog_spi_out
-                  0x00221e                  _setPixel
-                  0x0024c0                  _st7565r_set_column_address
-                  0x0024e0                  _st7565r_set_page_address
-                  0x001652                  _startMenu
-                  0x0023e8                  _writeChar
-                  0x00246c                  _writeString
+                  0x0022ea                  _clearDisplay
+                  0x0023ea                  _clearPixel
+                  0x00164c                  _delayMs
+                  0x001704                  _drawArea
+                  0x0024d0                  _drawBitmap
+                  0x00167e                  _drawLine
+                  0x002436                  _drawScreen
+                  0x001554                  _forward
+                  0x002360                  _initScreen
+                  0x001cd2                  _main
+                  0x002246                  _mdog_Init
+                  0x002292                  _mdog_spi_out
+                  0x0023a0                  _setPixel
+                  0x002642                  _st7565r_set_column_address
+                  0x002662                  _st7565r_set_page_address
+                  0x00174a                  _startMenu
+                  0x001620                  _turnLeft
+                  0x0015f8                  _turnRight
+                  0x00256a                  _writeChar
+                  0x0025ee                  _writeString
 
 Memory Configuration
 
@@ -236,192 +250,192 @@ LOAD c:/program files (x86)/microchip/xc16/v1.21/bin/bin/../../lib/PIC24F\libpPI
                   0x001401          0x2 SHORT 0x4
                   0x001402          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x001403          0x2 SHORT 0x0
-                  0x001404          0x2 SHORT 0x2560 DEFINED (__DefaultInterrupt)?ABSOLUTE (__DefaultInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001404          0x2 SHORT 0x26e2 DEFINED (__DefaultInterrupt)?ABSOLUTE (__DefaultInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001405          0x2 SHORT 0x4
                   0x001406          0x2 SHORT 0x0 DEFINED (__DefaultInterrupt)?((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001407          0x2 SHORT 0x0
-                  0x001408          0x2 SHORT 0x2530 DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x001408          0x2 SHORT 0x26b2 DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
                   0x001409          0x2 SHORT 0x4
                   0x00140a          0x2 SHORT 0x0 DEFINED (__OscillatorFail)?((ABSOLUTE (__OscillatorFail) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00140b          0x2 SHORT 0x0
-                  0x00140c          0x2 SHORT 0x2536 DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00140c          0x2 SHORT 0x26b8 DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
                   0x00140d          0x2 SHORT 0x4
                   0x00140e          0x2 SHORT 0x0 DEFINED (__AddressError)?((ABSOLUTE (__AddressError) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00140f          0x2 SHORT 0x0
-                  0x001410          0x2 SHORT 0x253c DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x001410          0x2 SHORT 0x26be DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
                   0x001411          0x2 SHORT 0x4
                   0x001412          0x2 SHORT 0x0 DEFINED (__StackError)?((ABSOLUTE (__StackError) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001413          0x2 SHORT 0x0
-                  0x001414          0x2 SHORT 0x2542 DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x001414          0x2 SHORT 0x26c4 DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
                   0x001415          0x2 SHORT 0x4
                   0x001416          0x2 SHORT 0x0 DEFINED (__MathError)?((ABSOLUTE (__MathError) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001417          0x2 SHORT 0x0
-                  0x001418          0x2 SHORT 0x2560 DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001418          0x2 SHORT 0x26e2 DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001419          0x2 SHORT 0x4
                   0x00141a          0x2 SHORT 0x0 DEFINED (__INT0Interrupt)?((ABSOLUTE (__INT0Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00141b          0x2 SHORT 0x0
-                  0x00141c          0x2 SHORT 0x2560 DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00141c          0x2 SHORT 0x26e2 DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00141d          0x2 SHORT 0x4
                   0x00141e          0x2 SHORT 0x0 DEFINED (__IC1Interrupt)?((ABSOLUTE (__IC1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00141f          0x2 SHORT 0x0
-                  0x001420          0x2 SHORT 0x2560 DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001420          0x2 SHORT 0x26e2 DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001421          0x2 SHORT 0x4
                   0x001422          0x2 SHORT 0x0 DEFINED (__OC1Interrupt)?((ABSOLUTE (__OC1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001423          0x2 SHORT 0x0
-                  0x001424          0x2 SHORT 0x2560 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001424          0x2 SHORT 0x26e2 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001425          0x2 SHORT 0x4
                   0x001426          0x2 SHORT 0x0 DEFINED (__T1Interrupt)?((ABSOLUTE (__T1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001427          0x2 SHORT 0x0
-                  0x001428          0x2 SHORT 0x2560 DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001428          0x2 SHORT 0x26e2 DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001429          0x2 SHORT 0x4
                   0x00142a          0x2 SHORT 0x0 DEFINED (__IC2Interrupt)?((ABSOLUTE (__IC2Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00142b          0x2 SHORT 0x0
-                  0x00142c          0x2 SHORT 0x2560 DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00142c          0x2 SHORT 0x26e2 DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00142d          0x2 SHORT 0x4
                   0x00142e          0x2 SHORT 0x0 DEFINED (__OC2Interrupt)?((ABSOLUTE (__OC2Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00142f          0x2 SHORT 0x0
-                  0x001430          0x2 SHORT 0x2560 DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001430          0x2 SHORT 0x26e2 DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001431          0x2 SHORT 0x4
                   0x001432          0x2 SHORT 0x0 DEFINED (__T2Interrupt)?((ABSOLUTE (__T2Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001433          0x2 SHORT 0x0
-                  0x001434          0x2 SHORT 0x2560 DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001434          0x2 SHORT 0x26e2 DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001435          0x2 SHORT 0x4
                   0x001436          0x2 SHORT 0x0 DEFINED (__T3Interrupt)?((ABSOLUTE (__T3Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001437          0x2 SHORT 0x0
-                  0x001438          0x2 SHORT 0x2560 DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001438          0x2 SHORT 0x26e2 DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001439          0x2 SHORT 0x4
                   0x00143a          0x2 SHORT 0x0 DEFINED (__SPI1ErrInterrupt)?((ABSOLUTE (__SPI1ErrInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00143b          0x2 SHORT 0x0
-                  0x00143c          0x2 SHORT 0x2560 DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00143c          0x2 SHORT 0x26e2 DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00143d          0x2 SHORT 0x4
                   0x00143e          0x2 SHORT 0x0 DEFINED (__SPI1Interrupt)?((ABSOLUTE (__SPI1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00143f          0x2 SHORT 0x0
-                  0x001440          0x2 SHORT 0x2560 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001440          0x2 SHORT 0x26e2 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001441          0x2 SHORT 0x4
                   0x001442          0x2 SHORT 0x0 DEFINED (__U1RXInterrupt)?((ABSOLUTE (__U1RXInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001443          0x2 SHORT 0x0
-                  0x001444          0x2 SHORT 0x2560 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001444          0x2 SHORT 0x26e2 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001445          0x2 SHORT 0x4
                   0x001446          0x2 SHORT 0x0 DEFINED (__U1TXInterrupt)?((ABSOLUTE (__U1TXInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001447          0x2 SHORT 0x0
-                  0x001448          0x2 SHORT 0x2560 DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001448          0x2 SHORT 0x26e2 DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001449          0x2 SHORT 0x4
                   0x00144a          0x2 SHORT 0x0 DEFINED (__ADC1Interrupt)?((ABSOLUTE (__ADC1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00144b          0x2 SHORT 0x0
-                  0x00144c          0x2 SHORT 0x2560 DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00144c          0x2 SHORT 0x26e2 DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00144d          0x2 SHORT 0x4
                   0x00144e          0x2 SHORT 0x0 DEFINED (__SI2C1Interrupt)?((ABSOLUTE (__SI2C1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00144f          0x2 SHORT 0x0
-                  0x001450          0x2 SHORT 0x2560 DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001450          0x2 SHORT 0x26e2 DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001451          0x2 SHORT 0x4
                   0x001452          0x2 SHORT 0x0 DEFINED (__MI2C1Interrupt)?((ABSOLUTE (__MI2C1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001453          0x2 SHORT 0x0
-                  0x001454          0x2 SHORT 0x2560 DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001454          0x2 SHORT 0x26e2 DEFINED (__CompInterrupt)?ABSOLUTE (__CompInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001455          0x2 SHORT 0x4
                   0x001456          0x2 SHORT 0x0 DEFINED (__CompInterrupt)?((ABSOLUTE (__CompInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001457          0x2 SHORT 0x0
-                  0x001458          0x2 SHORT 0x24f4 DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001458          0x2 SHORT 0x2676 DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001459          0x2 SHORT 0x4
                   0x00145a          0x2 SHORT 0x0 DEFINED (__CNInterrupt)?((ABSOLUTE (__CNInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00145b          0x2 SHORT 0x0
-                  0x00145c          0x2 SHORT 0x2560 DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00145c          0x2 SHORT 0x26e2 DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00145d          0x2 SHORT 0x4
                   0x00145e          0x2 SHORT 0x0 DEFINED (__INT1Interrupt)?((ABSOLUTE (__INT1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00145f          0x2 SHORT 0x0
-                  0x001460          0x2 SHORT 0x2560 DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001460          0x2 SHORT 0x26e2 DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001461          0x2 SHORT 0x4
                   0x001462          0x2 SHORT 0x0 DEFINED (__OC3Interrupt)?((ABSOLUTE (__OC3Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001463          0x2 SHORT 0x0
-                  0x001464          0x2 SHORT 0x2560 DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001464          0x2 SHORT 0x26e2 DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001465          0x2 SHORT 0x4
                   0x001466          0x2 SHORT 0x0 DEFINED (__OC4Interrupt)?((ABSOLUTE (__OC4Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001467          0x2 SHORT 0x0
-                  0x001468          0x2 SHORT 0x2560 DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001468          0x2 SHORT 0x26e2 DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001469          0x2 SHORT 0x4
                   0x00146a          0x2 SHORT 0x0 DEFINED (__T4Interrupt)?((ABSOLUTE (__T4Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00146b          0x2 SHORT 0x0
-                  0x00146c          0x2 SHORT 0x2560 DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00146c          0x2 SHORT 0x26e2 DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00146d          0x2 SHORT 0x4
                   0x00146e          0x2 SHORT 0x0 DEFINED (__T5Interrupt)?((ABSOLUTE (__T5Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00146f          0x2 SHORT 0x0
-                  0x001470          0x2 SHORT 0x2560 DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001470          0x2 SHORT 0x26e2 DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001471          0x2 SHORT 0x4
                   0x001472          0x2 SHORT 0x0 DEFINED (__INT2Interrupt)?((ABSOLUTE (__INT2Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001473          0x2 SHORT 0x0
-                  0x001474          0x2 SHORT 0x2560 DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001474          0x2 SHORT 0x26e2 DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001475          0x2 SHORT 0x4
                   0x001476          0x2 SHORT 0x0 DEFINED (__U2RXInterrupt)?((ABSOLUTE (__U2RXInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001477          0x2 SHORT 0x0
-                  0x001478          0x2 SHORT 0x2560 DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001478          0x2 SHORT 0x26e2 DEFINED (__U2TXInterrupt)?ABSOLUTE (__U2TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001479          0x2 SHORT 0x4
                   0x00147a          0x2 SHORT 0x0 DEFINED (__U2TXInterrupt)?((ABSOLUTE (__U2TXInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00147b          0x2 SHORT 0x0
-                  0x00147c          0x2 SHORT 0x2560 DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00147c          0x2 SHORT 0x26e2 DEFINED (__SPI2ErrInterrupt)?ABSOLUTE (__SPI2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00147d          0x2 SHORT 0x4
                   0x00147e          0x2 SHORT 0x0 DEFINED (__SPI2ErrInterrupt)?((ABSOLUTE (__SPI2ErrInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00147f          0x2 SHORT 0x0
-                  0x001480          0x2 SHORT 0x2560 DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001480          0x2 SHORT 0x26e2 DEFINED (__SPI2Interrupt)?ABSOLUTE (__SPI2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001481          0x2 SHORT 0x4
                   0x001482          0x2 SHORT 0x0 DEFINED (__SPI2Interrupt)?((ABSOLUTE (__SPI2Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001483          0x2 SHORT 0x0
-                  0x001484          0x2 SHORT 0x2560 DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001484          0x2 SHORT 0x26e2 DEFINED (__IC3Interrupt)?ABSOLUTE (__IC3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001485          0x2 SHORT 0x4
                   0x001486          0x2 SHORT 0x0 DEFINED (__IC3Interrupt)?((ABSOLUTE (__IC3Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001487          0x2 SHORT 0x0
-                  0x001488          0x2 SHORT 0x2560 DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001488          0x2 SHORT 0x26e2 DEFINED (__IC4Interrupt)?ABSOLUTE (__IC4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001489          0x2 SHORT 0x4
                   0x00148a          0x2 SHORT 0x0 DEFINED (__IC4Interrupt)?((ABSOLUTE (__IC4Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00148b          0x2 SHORT 0x0
-                  0x00148c          0x2 SHORT 0x2560 DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00148c          0x2 SHORT 0x26e2 DEFINED (__IC5Interrupt)?ABSOLUTE (__IC5Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00148d          0x2 SHORT 0x4
                   0x00148e          0x2 SHORT 0x0 DEFINED (__IC5Interrupt)?((ABSOLUTE (__IC5Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00148f          0x2 SHORT 0x0
-                  0x001490          0x2 SHORT 0x2560 DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001490          0x2 SHORT 0x26e2 DEFINED (__OC5Interrupt)?ABSOLUTE (__OC5Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001491          0x2 SHORT 0x4
                   0x001492          0x2 SHORT 0x0 DEFINED (__OC5Interrupt)?((ABSOLUTE (__OC5Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001493          0x2 SHORT 0x0
-                  0x001494          0x2 SHORT 0x2560 DEFINED (__PMPInterrupt)?ABSOLUTE (__PMPInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001494          0x2 SHORT 0x26e2 DEFINED (__PMPInterrupt)?ABSOLUTE (__PMPInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001495          0x2 SHORT 0x4
                   0x001496          0x2 SHORT 0x0 DEFINED (__PMPInterrupt)?((ABSOLUTE (__PMPInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x001497          0x2 SHORT 0x0
-                  0x001498          0x2 SHORT 0x2560 DEFINED (__SI2C2Interrupt)?ABSOLUTE (__SI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x001498          0x2 SHORT 0x26e2 DEFINED (__SI2C2Interrupt)?ABSOLUTE (__SI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x001499          0x2 SHORT 0x4
                   0x00149a          0x2 SHORT 0x0 DEFINED (__SI2C2Interrupt)?((ABSOLUTE (__SI2C2Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00149b          0x2 SHORT 0x0
-                  0x00149c          0x2 SHORT 0x2560 DEFINED (__MI2C2Interrupt)?ABSOLUTE (__MI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00149c          0x2 SHORT 0x26e2 DEFINED (__MI2C2Interrupt)?ABSOLUTE (__MI2C2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00149d          0x2 SHORT 0x4
                   0x00149e          0x2 SHORT 0x0 DEFINED (__MI2C2Interrupt)?((ABSOLUTE (__MI2C2Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x00149f          0x2 SHORT 0x0
-                  0x0014a0          0x2 SHORT 0x2560 DEFINED (__RTCCInterrupt)?ABSOLUTE (__RTCCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0014a0          0x2 SHORT 0x26e2 DEFINED (__RTCCInterrupt)?ABSOLUTE (__RTCCInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0014a1          0x2 SHORT 0x4
                   0x0014a2          0x2 SHORT 0x0 DEFINED (__RTCCInterrupt)?((ABSOLUTE (__RTCCInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014a3          0x2 SHORT 0x0
-                  0x0014a4          0x2 SHORT 0x2560 DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0014a4          0x2 SHORT 0x26e2 DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0014a5          0x2 SHORT 0x4
                   0x0014a6          0x2 SHORT 0x0 DEFINED (__U1ErrInterrupt)?((ABSOLUTE (__U1ErrInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014a7          0x2 SHORT 0x0
-                  0x0014a8          0x2 SHORT 0x2560 DEFINED (__U2ErrInterrupt)?ABSOLUTE (__U2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0014a8          0x2 SHORT 0x26e2 DEFINED (__U2ErrInterrupt)?ABSOLUTE (__U2ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0014a9          0x2 SHORT 0x4
                   0x0014aa          0x2 SHORT 0x0 DEFINED (__U2ErrInterrupt)?((ABSOLUTE (__U2ErrInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014ab          0x2 SHORT 0x0
-                  0x0014ac          0x2 SHORT 0x2560 DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0014ac          0x2 SHORT 0x26e2 DEFINED (__CRCInterrupt)?ABSOLUTE (__CRCInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0014ad          0x2 SHORT 0x4
                   0x0014ae          0x2 SHORT 0x0 DEFINED (__CRCInterrupt)?((ABSOLUTE (__CRCInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014af          0x2 SHORT 0x0
-                  0x0014b0          0x2 SHORT 0x2560 DEFINED (__LVDInterrupt)?ABSOLUTE (__LVDInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0014b0          0x2 SHORT 0x26e2 DEFINED (__LVDInterrupt)?ABSOLUTE (__LVDInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0014b1          0x2 SHORT 0x4
                   0x0014b2          0x2 SHORT 0x0 DEFINED (__LVDInterrupt)?((ABSOLUTE (__LVDInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014b3          0x2 SHORT 0x0
-                  0x0014b4          0x2 SHORT 0x2560 DEFINED (__CTMUInterrupt)?ABSOLUTE (__CTMUInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0014b4          0x2 SHORT 0x26e2 DEFINED (__CTMUInterrupt)?ABSOLUTE (__CTMUInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0014b5          0x2 SHORT 0x4
                   0x0014b6          0x2 SHORT 0x0 DEFINED (__CTMUInterrupt)?((ABSOLUTE (__CTMUInterrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014b7          0x2 SHORT 0x0
-                  0x0014b8          0x2 SHORT 0x2560 DEFINED (__USB1Interrupt)?ABSOLUTE (__USB1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0014b8          0x2 SHORT 0x26e2 DEFINED (__USB1Interrupt)?ABSOLUTE (__USB1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0014b9          0x2 SHORT 0x4
                   0x0014ba          0x2 SHORT 0x0 DEFINED (__USB1Interrupt)?((ABSOLUTE (__USB1Interrupt) >> 0x10) & 0x7f):((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014bb          0x2 SHORT 0x0
                   0x0014bc                  __DEFAULT_VECTOR = .
-                  0x0014bc          0x2 SHORT 0x2560 ABSOLUTE (__DefaultInterrupt)
+                  0x0014bc          0x2 SHORT 0x26e2 ABSOLUTE (__DefaultInterrupt)
                   0x0014bd          0x2 SHORT 0x4
                   0x0014be          0x2 SHORT 0x0 ((ABSOLUTE (__DefaultInterrupt) >> 0x10) & 0x7f)
                   0x0014bf          0x2 SHORT 0x0
@@ -460,56 +474,56 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x1bdb
+.debug_info       0x000000       0x1c65
  *(.debug_info)
- .debug_info      0x000000         0xed build/default/production/Dogm128x64/BoldFont.o
- .debug_info      0x0000ed        0x7b3 build/default/production/Dogm128x64/dogm.o
- .debug_info      0x0008a0         0xb3 build/default/production/configuration_bits.o
- .debug_info      0x000953        0x2b8 build/default/production/interrupts.o
- .debug_info      0x000c0b        0x449 build/default/production/main.o
- .debug_info      0x001054         0xca build/default/production/system.o
- .debug_info      0x00111e        0x266 build/default/production/traps.o
- .debug_info      0x001384        0x857 build/default/production/user.o
+ .debug_info      0x000000         0xe2 build/default/production/Dogm128x64/BoldFont.o
+ .debug_info      0x0000e2        0x7a8 build/default/production/Dogm128x64/dogm.o
+ .debug_info      0x00088a         0xa8 build/default/production/configuration_bits.o
+ .debug_info      0x000932        0x2ad build/default/production/interrupts.o
+ .debug_info      0x000bdf        0x520 build/default/production/main.o
+ .debug_info      0x0010ff         0xbf build/default/production/system.o
+ .debug_info      0x0011be        0x25b build/default/production/traps.o
+ .debug_info      0x001419        0x84c build/default/production/user.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x570
+.debug_abbrev     0x000000        0x592
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x42 build/default/production/Dogm128x64/BoldFont.o
  .debug_abbrev    0x000042        0x16b build/default/production/Dogm128x64/dogm.o
  .debug_abbrev    0x0001ad         0x1f build/default/production/configuration_bits.o
  .debug_abbrev    0x0001cc         0xbf build/default/production/interrupts.o
- .debug_abbrev    0x00028b        0x129 build/default/production/main.o
- .debug_abbrev    0x0003b4         0x34 build/default/production/system.o
- .debug_abbrev    0x0003e8         0x7d build/default/production/traps.o
- .debug_abbrev    0x000465        0x10b build/default/production/user.o
+ .debug_abbrev    0x00028b        0x14b build/default/production/main.o
+ .debug_abbrev    0x0003d6         0x34 build/default/production/system.o
+ .debug_abbrev    0x00040a         0x7d build/default/production/traps.o
+ .debug_abbrev    0x000487        0x10b build/default/production/user.o
 
-.debug_line       0x000000       0x119b
+.debug_line       0x000000       0x1279
  *(.debug_line)
  .debug_line      0x000000         0x3d build/default/production/Dogm128x64/BoldFont.o
  .debug_line      0x00003d        0x635 build/default/production/Dogm128x64/dogm.o
  .debug_line      0x000672         0x24 build/default/production/configuration_bits.o
  .debug_line      0x000696         0xf3 build/default/production/interrupts.o
- .debug_line      0x000789        0x6fd build/default/production/main.o
- .debug_line      0x000e86         0x4a build/default/production/system.o
- .debug_line      0x000ed0        0x1b6 build/default/production/traps.o
- .debug_line      0x001086        0x115 build/default/production/user.o
+ .debug_line      0x000789        0x7db build/default/production/main.o
+ .debug_line      0x000f64         0x4a build/default/production/system.o
+ .debug_line      0x000fae        0x1b6 build/default/production/traps.o
+ .debug_line      0x001164        0x115 build/default/production/user.o
 
-.debug_frame      0x000000        0x268
+.debug_frame      0x000000        0x298
  *(.debug_frame)
  .debug_frame     0x000000         0xf4 build/default/production/Dogm128x64/dogm.o
  .debug_frame     0x0000f4         0x24 build/default/production/interrupts.o
- .debug_frame     0x000118         0x64 build/default/production/main.o
- .debug_frame     0x00017c         0x24 build/default/production/system.o
- .debug_frame     0x0001a0         0xa4 build/default/production/traps.o
- .debug_frame     0x000244         0x24 build/default/production/user.o
+ .debug_frame     0x000118         0x94 build/default/production/main.o
+ .debug_frame     0x0001ac         0x24 build/default/production/system.o
+ .debug_frame     0x0001d0         0xa4 build/default/production/traps.o
+ .debug_frame     0x000274         0x24 build/default/production/user.o
 
-.debug_str        0x000000         0xe7
+.debug_str        0x000000         0xf1
  *(.debug_str)
  .debug_str       0x000000         0x58 build/default/production/Dogm128x64/dogm.o
  .debug_str       0x000058         0x25 build/default/production/interrupts.o
- .debug_str       0x00007d         0x26 build/default/production/main.o
- .debug_str       0x0000a3          0xc build/default/production/traps.o
- .debug_str       0x0000af         0x38 build/default/production/user.o
+ .debug_str       0x00007d         0x30 build/default/production/main.o
+ .debug_str       0x0000ad          0xc build/default/production/traps.o
+ .debug_str       0x0000b9         0x38 build/default/production/user.o
 
 .debug_loc
  *(.debug_loc)
@@ -518,7 +532,7 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x2cf
+                  0x000000        0x321
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x1f build/default/production/Dogm128x64/BoldFont.o
@@ -527,13 +541,13 @@ __CONFIG1
  .debug_pubnames
                   0x000141         0x23 build/default/production/interrupts.o
  .debug_pubnames
-                  0x000164         0x65 build/default/production/main.o
+                  0x000164         0xb7 build/default/production/main.o
  .debug_pubnames
-                  0x0001c9         0x2a build/default/production/system.o
+                  0x00021b         0x2a build/default/production/system.o
  .debug_pubnames
-                  0x0001f3         0xbe build/default/production/traps.o
+                  0x000245         0xbe build/default/production/traps.o
  .debug_pubnames
-                  0x0002b1         0x1e build/default/production/user.o
+                  0x000303         0x1e build/default/production/user.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -1554,56 +1568,63 @@ __c30_signature
  .nbss              0x0c00        0x400 build/default/production/Dogm128x64/dogm.o
                     0x0c00                  _dogmScreen
 
-.ndata              0x1000        0x2aa
+.ndata              0x1000        0x378
  .ndata             0x1000        0x2a8 build/default/production/Dogm128x64/BoldFont.o
                     0x1000                  _boldFont
- .ndata             0x12a8          0x2 build/default/production/main.o
-                    0x12a8                  _lastButtonChanged
+ .ndata             0x12a8         0xd0 build/default/production/main.o
+                    0x12a8                  _direction
+                    0x12aa                  _maze
+                    0x1372                  _userX
+                    0x1374                  _userY
+                    0x1376                  _lastButtonChanged
 
-.text             0x001554        0x6e2
- .text            0x001554        0x6e2 build/default/production/main.o
-                  0x001554                  _delayMs
-                  0x001586                  _drawLine
-                  0x00160c                  _drawArea
-                  0x001652                  _startMenu
-                  0x001bda                  _main
+.text             0x001554        0x7da
+ .text            0x001554        0x7da build/default/production/main.o
+                  0x001554                  _forward
+                  0x0015f8                  _turnRight
+                  0x001620                  _turnLeft
+                  0x00164c                  _delayMs
+                  0x00167e                  _drawLine
+                  0x001704                  _drawArea
+                  0x00174a                  _startMenu
+                  0x001cd2                  _main
 
-.dinit            0x001c36        0x48e
- .dinit           0x001c36        0x48e data_init
+.dinit            0x001d2e        0x518
+ .dinit           0x001d2e        0x518 data_init
 
-.text             0x0020c4        0x430
- .text            0x0020c4        0x430 build/default/production/Dogm128x64/dogm.o
-                  0x0020c4                  _mdog_Init
-                  0x002110                  _mdog_spi_out
-                  0x002140                  _SPI_cmd_send
-                  0x002154                  _SPI_data_send
-                  0x002168                  _clearDisplay
-                  0x0021de                  _initScreen
-                  0x00221e                  _setPixel
-                  0x002268                  _clearPixel
-                  0x0022b4                  _drawScreen
-                  0x00234e                  _drawBitmap
-                  0x0023e8                  _writeChar
-                  0x00246c                  _writeString
-                  0x0024c0                  _st7565r_set_column_address
-                  0x0024e0                  _st7565r_set_page_address
+.text             0x002246        0x430
+ .text            0x002246        0x430 build/default/production/Dogm128x64/dogm.o
+                  0x002246                  _mdog_Init
+                  0x002292                  _mdog_spi_out
+                  0x0022c2                  _SPI_cmd_send
+                  0x0022d6                  _SPI_data_send
+                  0x0022ea                  _clearDisplay
+                  0x002360                  _initScreen
+                  0x0023a0                  _setPixel
+                  0x0023ea                  _clearPixel
+                  0x002436                  _drawScreen
+                  0x0024d0                  _drawBitmap
+                  0x00256a                  _writeChar
+                  0x0025ee                  _writeString
+                  0x002642                  _st7565r_set_column_address
+                  0x002662                  _st7565r_set_page_address
 
-.isr.text         0x0024f4         0x70
- .isr.text        0x0024f4         0x3c build/default/production/interrupts.o
-                  0x0024f4                  __CNInterrupt
- .isr.text        0x002530         0x34 build/default/production/traps.o
-                  0x002530                  __OscillatorFail
-                  0x002536                  __AddressError
-                  0x00253c                  __StackError
-                  0x002542                  __MathError
-                  0x002548                  __AltOscillatorFail
-                  0x00254e                  __AltAddressError
-                  0x002554                  __AltStackError
-                  0x00255a                  __AltMathError
-                  0x002560                  __DefaultInterrupt
+.isr.text         0x002676         0x70
+ .isr.text        0x002676         0x3c build/default/production/interrupts.o
+                  0x002676                  __CNInterrupt
+ .isr.text        0x0026b2         0x34 build/default/production/traps.o
+                  0x0026b2                  __OscillatorFail
+                  0x0026b8                  __AddressError
+                  0x0026be                  __StackError
+                  0x0026c4                  __MathError
+                  0x0026ca                  __AltOscillatorFail
+                  0x0026d0                  __AltAddressError
+                  0x0026d6                  __AltStackError
+                  0x0026dc                  __AltMathError
+                  0x0026e2                  __DefaultInterrupt
 
-.text             0x002564         0x32
- .text            0x002564         0x2c build/default/production/user.o
-                  0x002564                  _InitApp
- .text            0x002590          0x6 build/default/production/system.o
-                  0x002590                  _ConfigureOscillator
+.text             0x0026e6         0x32
+ .text            0x0026e6         0x2c build/default/production/user.o
+                  0x0026e6                  _InitApp
+ .text            0x002712          0x6 build/default/production/system.o
+                  0x002712                  _ConfigureOscillator
