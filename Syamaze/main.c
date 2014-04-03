@@ -18,7 +18,7 @@ unsigned char direction = 1;
  * 3 = ending point
  */
 
-int maze [][] = {
+int maze [10][10] = {
     { 1, 3, 1, 1, 1, 1, 1, 1, 1, 1},
     { 1, 0, 1, 0, 1, 0, 0, 0, 1, 1},
     { 1, 0, 0, 0, 0, 0, 1, 0, 0, 1},
