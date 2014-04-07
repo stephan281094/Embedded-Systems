@@ -29,25 +29,11 @@
 				drawLine(0, 0, 129, 64, 'dotted');
 				drawLine(127, 0, -2, 64, 'dotted');
 
-				/* Vertical lines */
-				// Left Left Mid (1)
-				drawLine(16, 8, 16, 56, 'dotted');
-				// Left Mid (2)
-				//drawLine(32, 0, 32, 64, 'dotted');
-				// Left Right Mid (3)
-				drawLine(48, 24, 48, 40, 'dotted');
-				// center (4)
-				//drawLine(64, 0, 64, 64, 'dotted');
-				// Right Left Mid (5)
-				drawLine(79, 24, 79, 40, 'dotted');
-				// Right Mid (6)
-				//drawLine(95, 0, 95, 64, 'dotted');
-				// Right Right Mid (7)
-				drawLine(111, 8, 111, 56, 'dotted');
-
-				// Horizontal line for testing purposes
-				//drawLine(16, 8, 128, 8, null);
-				//drawLine(16, 56, 128, 56, null);
+				// Horizontal and vertical lines
+				drawArea(16, 8, 1, 48);
+				drawArea(48, 24, 1, 17);
+				drawArea(79, 24, 1, 17);
+				drawArea(111, 8, 1, 48);
 				drawArea(16, 8, 96, 1);
 				drawArea(16, 56, 96, 1);
 				drawArea(48, 24, 32, 1);
@@ -62,7 +48,7 @@
 				drawClearSyamaze();
 			}
 
-			window.onload = startMenu();
+			window.onload = init();
 		</script>
 	</body>
 </html>

@@ -34,6 +34,31 @@ function drawLine(xA, yA, xB, yB, style) {
 }
 
 /**
+ * TESTER
+ */
+function drawLine2(xA, yA, xB, yB, style) {
+	var dX = xB - xA;
+	var dY = yB - yA;
+	var alpha = dX / dY;
+
+	for (var i = 0; i < dY; i++) {
+		var yP = yA + i;
+		var xP = xA + (i * alpha);
+		var xP2 = xA + ((i + 1) * alpha);
+
+		if (style === 'dotted') {
+			setPixel(xP, yP);
+		} else {
+			while (xP < xP2) {
+				setPixel(xP, yP);
+				setPixel(30, 30);
+				xP++;
+			}
+		}
+	}
+}
+
+/**
  * drawArea Draws a rectangular area
  * @param {type} x
  * @param {type} y
@@ -211,4 +236,51 @@ function drawClearSyamaze(){
 	clearPixel(50, 6);
 	clearArea(57, 6, 4, 1);
 	clearArea(66, 6, 2, 1);
+	clearPixel(74, 6);
+	clearArea(81, 6, 8, 1);
+	clearArea(90, 6, 7, 1);
+	clearPixel(30, 7);
+	clearPixel(32, 7);
+	clearPixel(36, 7);
+	clearPixel(38, 7);
+	clearPixel(40, 7);
+	clearPixel(44, 7);
+	clearPixel(49, 7);
+	clearPixel(51, 7);
+	clearPixel(58, 7);
+	clearArea(60, 7, 2, 1);
+	clearArea(65, 7, 2, 1);
+	clearPixel(73, 7);
+	clearPixel(75, 7);
+	clearPixel(81, 7);
+	clearPixel(85, 7);
+	clearPixel(87, 7);
+	clearPixel(91, 7);
+	clearPixel(93, 7);
+	clearPixel(96, 7);
+	
+	
+	
+	clearArea(31, 14, 5, 1);
+	clearArea(39, 14, 5, 1);
+	clearArea(45, 14, 5, 1);
+	clearArea(53, 14, 3, 1);
+	clearArea(57, 14, 4, 1);
+	clearArea(65, 14, 3, 1);
+	clearArea(69, 14, 5, 1);
+	clearArea(77, 14, 3, 1);
+	clearArea(81, 14, 8, 1);
+	clearArea(90, 14, 7, 1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
