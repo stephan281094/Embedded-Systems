@@ -1,5 +1,6 @@
 #include <p24FJ64GB002.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "DogM.h"
 
 // Defining player perspective directions
@@ -8,7 +9,16 @@
 #define SOUTH 4
 #define WEST 8
 
+void turnLeft();
+void turnRight();
+void forward();
+void drawArea(unsigned int x, unsigned int y, unsigned int length, unsigned int height);
+void drawLine(unsigned int xA, unsigned int yA, unsigned int xB, unsigned int yB, unsigned int style);
+void delayMs(unsigned int time);
+
 unsigned char direction = 1;
+unsigned int userX = 1;
+unsigned int userY = 1;
 
 /*
  * This is a map of the maze
@@ -30,9 +40,6 @@ int maze [10][10] = {
     { 1, 2, 0, 0, 0, 0, 0, 0, 0, 1},
     { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 };
-
-unsigned int userX = 1;
-unsigned int userY = 1;
 
 void forward() {
     if (direction == NORTH) {
@@ -84,10 +91,6 @@ void turnLeft() {
     }
 }
 
-
-
-
-
 /*
  lastButtonChanged is modified on a interrup basis
  The function doing ths is called _CNInterrupt(void)
@@ -113,6 +116,7 @@ void delayMs(unsigned int time) {
 
 /**
  * drawLine
+ * this function's style parameter takes 1 for dotted lines and 0 for regular lines
  * @param xA
  * @param yA
  * @param xB
@@ -124,7 +128,7 @@ void drawLine(unsigned int xA, unsigned int yA, unsigned int xB, unsigned int yB
     int dY = yB - yA;
     int alpha = dX / dY;
 
-    int i;
+    unsigned int i;
     for (i = 0; i < dY; i++) {
         int yP = yA + i;
         int xP = xA + (i * alpha);
@@ -319,8 +323,6 @@ void startMenu() {
  * @return
  */
 int main(void) {
-    int x, y;
-
     // Init ap set all ports to digital and enables the int on pin change 
     // needed for the buttons/
     InitApp();
@@ -334,33 +336,25 @@ int main(void) {
     // in drawScreen to send out to the display
     initScreen();
 
-    // Beware writeString will write directly to the display
-    // the internal bitmap is not modified.
-
-    //writeString(boldFont, 0x0, 0x3, "T");
-
     // Set both led's of
     LATBbits.LATB14 = LATBbits.LATB15 = 0;
 
     while (1) {
         // Splash screen
         if (lastButtonChanged == 0) {
-            startMenu();
+        // startMenu();
         }
         if (lastButtonChanged == 1) {
-            initScreen();
+            drawLine(0, 0, 129, 64, 1);
+            drawLine(127, 0, -2, 64, 1);
         }
         if (lastButtonChanged == 2) {
-            initScreen();
         }
         if (lastButtonChanged == 3) {
-            initScreen();
         }
         if (lastButtonChanged == 4) {
-            initScreen();
         }
-
-        drawScreen(dogmScreen, 8, 128);
         delayMs(250);
+        drawScreen(dogmScreen, 8, 128);
     };
 }
