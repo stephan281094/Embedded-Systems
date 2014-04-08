@@ -279,12 +279,12 @@ function drawDiagLines(){
 }
 
 function drawAreaLines(){
-	drawArea(16, 8, 1, 48);
+//	drawArea(16, 8, 1, 48);
+//	drawArea(111, 8, 1, 48);
+//	drawArea(16, 8, 96, 1);
+//	drawArea(16, 55, 96, 1);
 	drawArea(48, 24, 1, 16);
 	drawArea(79, 24, 1, 16);
-	drawArea(111, 8, 1, 48);
-	drawArea(16, 8, 96, 1);
-	drawArea(16, 55, 96, 1);
 	drawArea(48, 24, 32, 1);
 	drawArea(48, 39, 32, 1);
 }
