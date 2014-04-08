@@ -278,58 +278,119 @@ function drawDiagLines(){
 	drawLine(127, 0, -2, 64, 'dotted');
 }
 
-function drawAreaLines(){
-//	drawArea(16, 8, 1, 48);
-//	drawArea(111, 8, 1, 48);
-//	drawArea(16, 8, 96, 1);
-//	drawArea(16, 55, 96, 1);
-	drawArea(48, 24, 1, 16);
-	drawArea(79, 24, 1, 16);
-	drawArea(48, 24, 32, 1);
-	drawArea(48, 39, 32, 1);
-}
-
-function drawDoorways(){
-	// 1
-	drawArea(6, 3, 1, 58);
+//function drawDoorways(){
+//	// 1
+//	drawArea(6, 3, 1, 58);
 //	clearArea(0, 0, 6, 64);
+//	drawArea(0, 3, 7, 1);
+//	drawArea(0, 60, 7, 1);
+//	
+//	// 2
+//	drawArea(38, 19, 1, 26);
+//	drawArea(30, 15, 1, 34);
+//	clearArea(31, 15, 7, 34);
+//	drawArea(31, 19, 7, 1);
+//	drawArea(31, 44, 7, 1);
+//	
+//	// 3
+//	drawArea(48, 24, 1, 16);
+//	drawArea(79, 24, 1, 16);
+//	drawArea(48, 24, 32, 1);
+//	drawArea(48, 39, 32, 1);
+//	clearArea(49, 25, 30, 14);
+//	
+//	// 4
+//	drawArea(89, 19, 1, 26);
+//	drawArea(97, 15, 1, 34);
+//	clearArea(90, 15, 7, 34);
+//	drawArea(90, 19, 7, 1);
+//	drawArea(90, 44, 7, 1);
+//	
+//	// 5
+//	drawArea(121, 3, 1, 58);
+//	clearArea(122, 0, 6, 64);
+//	drawArea(121, 3, 7, 1);
+//	drawArea(121, 60, 7, 1);
+//}
+//
+//function drawShadows(){
+//	// 1
+//	setPixel(0, 62);
+//	setPixel(1, 61);
+//	setPixel(3, 61);
+//	
+//	// 2
+//	setPixel(31, 46);
+//	setPixel(32, 45);
+//	setPixel(34, 45);
+//	
+//	// 3
+//	drawLine(52, 25, 48, 29, 'dotted');
+//	drawLine(54, 25, 50, 29, 'dotted');
+//	setPixel(49, 30);
+//	drawLine(52, 29, 50, 31, 'dotted');
+//	drawLine(55, 26, 53, 28, 'dotted');
+//	drawLine(57, 26, 53, 30, 'dotted');
+//	drawLine(52, 31, 49, 34, 'dotted');
+//	drawLine(60, 25, 51, 34, 'dotted');
+//	drawLine(56, 32, 47, 40, 'dotted');
+//	drawLine(62, 25, 57, 30, 'dotted');
+//	drawLine(65, 26, 53, 37, 'dotted');
+//	drawLine(68, 25, 57, 35, 'dotted');
+//	drawLine(60, 34, 55, 38, 'dotted');
+//	drawLine(69, 27, 61, 34, 'dotted');
+//	drawLine(74, 25, 64, 34, 'dotted');
+//	drawLine(65, 35, 60, 38, 'dotted');
+//	drawLine(78, 25, 65, 38, 'dotted');
+//	drawLine(76, 30, 68, 38, 'dotted');
+//	drawLine(78, 32, 73, 37, 'dotted');
+//	drawLine(77, 35, 74, 38, 'dotted');
+//	
+//	
+//	// 4
+//	setPixel(95, 45);
+//	setPixel(96, 46);
+//	setPixel(93, 45);
+//	
+//	// 5
+//	setPixel(126, 61);
+//	setPixel(127, 62);
+//	setPixel(124, 61);
+//}
+
+function drawLeft(){
+	// Way
+	drawArea(6, 3, 1, 58);
+	clearArea(0, 0, 6, 64);
 	drawArea(0, 3, 7, 1);
 	drawArea(0, 60, 7, 1);
-	
-	// 2
-	drawArea(38, 19, 1, 26);
-	drawArea(30, 15, 1, 34);
-//	clearArea(31, 15, 7, 34);
-	drawArea(31, 19, 7, 1);
-	drawArea(31, 44, 7, 1);
-	
-	// 4
-	drawArea(89, 19, 1, 26);
-	drawArea(97, 15, 1, 34);
-//	clearArea(31, 15, 7, 34);
-	drawArea(90, 19, 7, 1);
-	drawArea(90, 44, 7, 1);
-	
-	// 5
-	drawArea(121, 3, 1, 58);
-//	clearArea(0, 0, 6, 64);
-	drawArea(121, 3, 7, 1);
-	drawArea(121, 60, 7, 1);
-}
-
-function drawShadows(){
-	// 1
+	// Shadow
 	setPixel(0, 62);
 	setPixel(1, 61);
 	setPixel(3, 61);
-	
-	// 2
+}
+
+function drawTopLeft(){
+	// Way
+	drawArea(38, 19, 1, 26);
+	drawArea(30, 15, 1, 34);
+	clearArea(31, 15, 7, 34);
+	drawArea(31, 19, 7, 1);
+	drawArea(31, 44, 7, 1);
+	// Shadow
 	setPixel(31, 46);
 	setPixel(32, 45);
 	setPixel(34, 45);
-	
-	// 3
+}
+
+function drawTop(){
+	// Way
+//	drawArea(48, 24, 1, 16);
+//	drawArea(79, 24, 1, 16);
+//	drawArea(48, 24, 32, 1);
+//	drawArea(48, 39, 32, 1);
 //	clearArea(49, 25, 30, 14);
+	// Shadow
 	drawLine(52, 25, 48, 29, 'dotted');
 	drawLine(54, 25, 50, 29, 'dotted');
 	setPixel(49, 30);
@@ -337,14 +398,56 @@ function drawShadows(){
 	drawLine(55, 26, 53, 28, 'dotted');
 	drawLine(57, 26, 53, 30, 'dotted');
 	drawLine(52, 31, 49, 34, 'dotted');
-		
-	
-	// 4
+	drawLine(60, 25, 51, 34, 'dotted');
+	drawLine(56, 32, 47, 40, 'dotted');
+	drawLine(62, 25, 57, 30, 'dotted');
+	drawLine(65, 26, 53, 37, 'dotted');
+	drawLine(68, 25, 57, 35, 'dotted');
+	drawLine(60, 34, 55, 38, 'dotted');
+	drawLine(69, 27, 61, 34, 'dotted');
+	drawLine(74, 25, 64, 34, 'dotted');
+	drawLine(65, 35, 60, 38, 'dotted');
+	drawLine(78, 25, 65, 38, 'dotted');
+	drawLine(76, 30, 68, 38, 'dotted');
+	drawLine(78, 32, 73, 37, 'dotted');
+	drawLine(77, 35, 74, 38, 'dotted');
+}
+
+function drawWallFar(){
+	drawArea(48, 24, 1, 16);
+	drawArea(79, 24, 1, 16);
+	drawArea(48, 24, 32, 1);
+	drawArea(48, 39, 32, 1);
+	clearArea(49, 25, 30, 14);
+}
+
+function drawWallClose(){
+	drawArea(16, 8, 1, 48);
+	drawArea(111, 8, 1, 48);
+	drawArea(16, 8, 96, 1);
+	drawArea(16, 55, 96, 1);
+}
+
+function drawTopRight(){
+	// Way
+	drawArea(89, 19, 1, 26);
+	drawArea(97, 15, 1, 34);
+	clearArea(90, 15, 7, 34);
+	drawArea(90, 19, 7, 1);
+	drawArea(90, 44, 7, 1);
+	// Shadow
 	setPixel(95, 45);
 	setPixel(96, 46);
 	setPixel(93, 45);
-	
-	// 5
+}
+
+function drawRight(){
+	// Way
+	drawArea(121, 3, 1, 58);
+	clearArea(122, 0, 6, 64);
+	drawArea(121, 3, 7, 1);
+	drawArea(121, 60, 7, 1);
+	// Shadow
 	setPixel(126, 61);
 	setPixel(127, 62);
 	setPixel(124, 61);
