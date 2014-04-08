@@ -317,6 +317,28 @@ function drawDoorways(){
 	drawArea(121, 60, 7, 1);
 }
 
+function drawShadows(){
+	// 1
+	setPixel(0, 62);
+	setPixel(1, 61);
+	setPixel(3, 61);
+	
+	// 2
+	setPixel(31, 46);
+	setPixel(32, 45);
+	setPixel(34, 45);
+	
+	// 4
+	setPixel(95, 45);
+	setPixel(96, 46);
+	setPixel(93, 45);
+	
+	// 5
+	setPixel(126, 61);
+	setPixel(127, 62);
+	setPixel(124, 61);
+}
+
 
 
 
