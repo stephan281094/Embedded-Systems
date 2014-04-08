@@ -280,14 +280,47 @@ function drawDiagLines(){
 
 function drawAreaLines(){
 	drawArea(16, 8, 1, 48);
-	drawArea(48, 24, 1, 17);
-	drawArea(79, 24, 1, 17);
+	drawArea(48, 24, 1, 16);
+	drawArea(79, 24, 1, 16);
 	drawArea(111, 8, 1, 48);
 	drawArea(16, 8, 96, 1);
 	drawArea(16, 55, 96, 1);
 	drawArea(48, 24, 32, 1);
-	drawArea(48, 40, 32, 1);
+	drawArea(48, 39, 32, 1);
 }
+
+function drawDoorways(){
+	// 1
+	drawArea(6, 3, 1, 58);
+//	clearArea(0, 0, 6, 64);
+	drawArea(0, 3, 7, 1);
+	drawArea(0, 60, 7, 1);
+	
+	// 2
+	drawArea(38, 19, 1, 26);
+	drawArea(30, 15, 1, 34);
+//	clearArea(31, 15, 7, 34);
+	drawArea(31, 19, 7, 1);
+	drawArea(31, 44, 7, 1);
+	
+	// 4
+	drawArea(89, 19, 1, 26);
+	drawArea(97, 15, 1, 34);
+//	clearArea(31, 15, 7, 34);
+	drawArea(90, 19, 7, 1);
+	drawArea(90, 44, 7, 1);
+	
+	// 5
+	drawArea(121, 3, 1, 58);
+//	clearArea(0, 0, 6, 64);
+	drawArea(121, 3, 7, 1);
+	drawArea(121, 60, 7, 1);
+}
+
+
+
+
+
 
 
 
