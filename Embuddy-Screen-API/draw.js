@@ -273,9 +273,21 @@ function drawClearSyamaze(){
 	clearArea(90, 14, 7, 1);
 }
 
+function drawDiagLines(){
+	drawLine(0, 0, 129, 64, 'dotted');
+	drawLine(127, 0, -2, 64, 'dotted');
+}
 
-
-
+function drawAreaLines(){
+	drawArea(16, 8, 1, 48);
+	drawArea(48, 24, 1, 17);
+	drawArea(79, 24, 1, 17);
+	drawArea(111, 8, 1, 48);
+	drawArea(16, 8, 96, 1);
+	drawArea(16, 55, 96, 1);
+	drawArea(48, 24, 32, 1);
+	drawArea(48, 40, 32, 1);
+}
 
 
 

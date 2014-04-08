@@ -22,22 +22,7 @@
 			 * init When window has loaded, this function will start
 			 */
 			function init() {
-				
-				//startMenu();
-				
-				/* Diagonal lines */
-				drawLine(0, 0, 129, 64, 'dotted');
-				drawLine(127, 0, -2, 64, 'dotted');
-
-				// Horizontal and vertical lines
-//				drawArea(16, 8, 1, 48);
-//				drawArea(48, 24, 1, 17);
-//				drawArea(79, 24, 1, 17);
-//				drawArea(111, 8, 1, 48);
-//				drawArea(16, 8, 96, 1);
-//				drawArea(16, 56, 96, 1);
-//				drawArea(48, 24, 32, 1);
-//				drawArea(48, 40, 32, 1);
+				playGround();
 			}
 
 			/**
@@ -46,6 +31,27 @@
 			function startMenu() {
 				drawCatHeadBig();
 				drawClearSyamaze();
+			}
+			
+			function playGround(){
+				/* Diagonal lines */
+				drawDiagLines();
+				// Horizontal and vertical lines
+				drawAreaLines();
+				
+				// 1
+				drawArea(6, 3, 1, 58);
+				clearArea(0, 0, 6, 3)
+				clearArea(0, 61, 6, 3);
+				drawArea(0, 3, 7, 1);
+				drawArea(0, 60, 7, 1);
+				
+				// 2
+				drawArea(38, 19, 1, 26);
+				drawArea(30, 15, 1, 34);
+				clearArea(31, 15, 7, 34)
+				drawArea(31, 19, 7, 1);
+				drawArea(31, 44, 7, 1);
 			}
 
 			window.onload = init();
