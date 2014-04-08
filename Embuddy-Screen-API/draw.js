@@ -328,6 +328,17 @@ function drawShadows(){
 	setPixel(32, 45);
 	setPixel(34, 45);
 	
+	// 3
+//	clearArea(49, 25, 30, 14);
+	drawLine(52, 25, 48, 29, 'dotted');
+	drawLine(54, 25, 50, 29, 'dotted');
+	setPixel(49, 30);
+	drawLine(52, 29, 50, 31, 'dotted');
+	drawLine(55, 26, 53, 28, 'dotted');
+	drawLine(57, 26, 53, 30, 'dotted');
+	drawLine(52, 31, 49, 34, 'dotted');
+		
+	
 	// 4
 	setPixel(95, 45);
 	setPixel(96, 46);
