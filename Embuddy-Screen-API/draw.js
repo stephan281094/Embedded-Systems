@@ -239,6 +239,7 @@ function drawClearSyamaze(){
 	clearPixel(74, 6);
 	clearArea(81, 6, 8, 1);
 	clearArea(90, 6, 7, 1);
+	
 	clearPixel(30, 7);
 	clearPixel(32, 7);
 	clearPixel(36, 7);
@@ -258,6 +259,117 @@ function drawClearSyamaze(){
 	clearPixel(91, 7);
 	clearPixel(93, 7);
 	clearPixel(96, 7);
+	
+	clearArea(30, 8, 2, 1);
+	clearPixel(38, 8);
+	clearPixel(40, 8);
+	clearPixel(44, 8);
+	clearPixel(48, 8);
+	clearPixel(50, 8);
+	clearPixel(52, 8);
+	clearPixel(58, 8);
+	clearPixel(60, 8);
+	clearPixel(62, 8);
+	clearPixel(64, 8);
+	clearPixel(66, 8);
+	clearPixel(72, 8);
+	clearPixel(74, 8);
+	clearPixel(76, 8);
+	clearPixel(84, 8);
+	clearPixel(86, 8);
+	clearPixel(91, 8);
+	clearPixel(93, 8);
+	
+	clearPixel(30, 9);
+	clearPixel(32, 9);
+	clearPixel(39, 9);
+	clearPixel(41, 9);
+	clearPixel(43, 9);
+	clearPixel(48, 9);
+	clearPixel(50, 9);
+	clearPixel(52, 9);
+	clearPixel(58, 9);
+	clearPixel(60, 9);
+	clearPixel(63, 9);
+	clearPixel(66, 9);
+	clearPixel(72, 9);
+	clearPixel(74, 9);
+	clearPixel(76, 9);
+	clearPixel(84, 9);
+	clearPixel(86, 9);
+	clearPixel(91, 9);
+	clearPixel(93, 9);
+	
+	clearArea(31, 10, 5, 1);
+	clearPixel(40, 10);
+	clearPixel(42, 10);
+	clearPixel(47, 10);
+	clearPixel(49, 10);
+	clearPixel(53, 10);
+	clearPixel(58, 10);
+	clearPixel(60, 10);
+	clearPixel(66, 10);
+	clearPixel(71, 10);
+	clearPixel(73, 10);
+	clearPixel(77, 10);
+	clearPixel(83, 10);
+	clearPixel(85, 10);
+	clearPixel(91, 10);
+	clearArea(93, 10, 3, 1);
+	
+	clearPixel(34, 11);
+	clearPixel(36, 11);
+	clearPixel(40, 11);
+	clearPixel(42, 11);
+	clearPixel(47, 11);
+	clearArea(49, 11, 5, 1);
+	clearPixel(58, 11);
+	clearPixel(60, 11);
+	clearPixel(66, 11);
+	clearPixel(71, 11);
+	clearArea(73, 11, 5, 1);
+	clearPixel(83, 11);
+	clearPixel(85, 11);
+	clearPixel(91, 11);
+	clearPixel(93, 11);
+	
+	clearArea(35, 12, 2, 1);
+	clearPixel(40, 12);
+	clearPixel(42, 12);
+	clearPixel(46, 12);
+	clearPixel(48, 12);
+	clearPixel(54, 12);
+	clearPixel(58, 12);
+	clearPixel(60, 12);
+	clearPixel(66, 12);
+	clearPixel(70, 12);
+	clearPixel(72, 12);
+	clearPixel(78, 12);
+	clearPixel(82, 12);
+	clearPixel(84, 12);
+	clearPixel(91, 12);
+	clearPixel(93, 12);
+	
+	clearPixel(30, 13);
+	clearPixel(34, 13);
+	clearPixel(36, 13);
+	clearPixel(40, 13);
+	clearPixel(42, 13);
+	clearPixel(46, 13);
+	clearPixel(48, 13);
+	clearPixel(54, 13);
+	clearPixel(58, 13);
+	clearPixel(60, 13);
+	clearPixel(66, 13);
+	clearPixel(70, 13);
+	clearPixel(72, 13);
+	clearPixel(78, 13);
+	clearPixel(82, 13);
+	clearPixel(84, 13);
+	clearPixel(88, 13);
+	clearPixel(91, 13);
+	clearPixel(93, 13);
+	clearPixel(96, 13);
 	
 	
 	
@@ -390,6 +502,7 @@ function drawTop(){
 //	drawArea(48, 24, 32, 1);
 //	drawArea(48, 39, 32, 1);
 //	clearArea(49, 25, 30, 14);
+	clearArea(49, 25, 30, 14);
 	// Shadow
 	drawLine(52, 25, 48, 29, 'dotted');
 	drawLine(54, 25, 50, 29, 'dotted');
