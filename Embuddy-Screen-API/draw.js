@@ -23,10 +23,10 @@ function drawLine(xA, yA, xB, yB, style) {
 		var xP2 = xA + ((i + 1) * alpha);
 
 		if (style === 'dotted') {
-			setPixel(xP, yP);
+			setPixel(Math.round(xP), Math.round(yP));
 		} else {
 			while (xP < xP2) {
-				setPixel(xP, yP);
+				setPixel(Math.round(xP), Math.round(yP));
 				xP++;
 			}
 		}
@@ -422,6 +422,7 @@ function drawWallFar(){
 }
 
 function drawWallClose(){
+	clearArea(17, 9, 94, 46);
 	drawArea(16, 8, 1, 48);
 	drawArea(111, 8, 1, 48);
 	drawArea(16, 8, 96, 1);
