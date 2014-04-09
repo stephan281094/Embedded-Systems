@@ -371,8 +371,6 @@ function drawClearSyamaze(){
 	clearPixel(93, 13);
 	clearPixel(96, 13);
 	
-	
-	
 	clearArea(31, 14, 5, 1);
 	clearArea(39, 14, 5, 1);
 	clearArea(45, 14, 5, 1);
@@ -383,6 +381,28 @@ function drawClearSyamaze(){
 	clearArea(77, 14, 3, 1);
 	clearArea(81, 14, 8, 1);
 	clearArea(90, 14, 7, 1);
+}
+
+function drawButtons(){
+	
+	// L
+	clearArea(116, 59, 1, 3);
+	clearArea(116, 62, 3, 1);
+	
+	// F
+	clearArea(120, 54, 1, 4);
+	clearArea(121, 54, 2, 1);
+	clearPixel(121, 56);
+	
+	// R
+	clearPixel(125, 61);
+	clearPixel(126, 60);
+	clearPixel(125, 59);
+	clearPixel(124, 59);
+	clearPixel(124, 60);
+	clearPixel(124, 61);
+	clearPixel(124, 62);
+	clearPixel(126, 62);
 }
 
 function drawDiagLines(){
